@@ -3,10 +3,10 @@
 game = list(range(1,10))
 
 def draw_game(game):
-    print ("-" * 13)
+    print ("-" * 19)
     for i in range(3):
-        print ("|", game[0+i*3], "|", game[1+i*3], "|", game[2+i*3], "|")
-        print ("-" * 13)
+        print (f'| {game[0+i*3]:^4}| {game[1+i*3]:^4}| {game[2+i*3]:^4}|')
+        print ("-" * 19)
 
 def take_input(player_number):
     valid = False
