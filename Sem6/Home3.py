@@ -4,3 +4,16 @@
 # in "Иван", "Мария", "Петр", "Илья", "Марина", "Петр", "Алина", "Бибочка"
 # out {'А': ['Алина'], 'Б': ['Бибочка'], 'И': ['Иван', 'Илья'],
 #  'М': ['Марина', 'Мария'], 'П': ['Петр', 'Петр']}
+def My_list(name):
+    print(name)
+    temp = [i[0] for i in name]
+    list_name = {}    
+
+    for j in temp:
+        list_name[j] = [i for i in name if i[0] in j] 
+    main = dict(sorted(list_name.items()))
+
+    return main 
+    
+name = "Иван", "Мария", "Петр", "Илья", "Марина", "Петр", "Алина", "Бибочка"
+print(My_list(name))
