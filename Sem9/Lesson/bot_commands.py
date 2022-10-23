@@ -1,9 +1,7 @@
-from telebot import types
 from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+from telegram.ext import ContextTypes
 import datetime
 from spy import *
-
     
 async def hello_com(update: Update, context: ContextTypes ):
     await log(update, context)
