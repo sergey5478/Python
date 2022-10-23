@@ -1,7 +1,7 @@
 # 3. Создайте программу для игры в "Крестики-нолики". Поле 3x3.
 # Игрок - игрок, без бота.
 game = list(range(1,10))
-
+print(game)
 def draw_game(game):
     print ("-" * 19)
     for i in range(3):
@@ -30,7 +30,12 @@ def check_win(game):
     win_coord = ((0,1,2),(3,4,5),(6,7,8),(0,3,6),(1,4,7),(2,5,8),\
         (0,4,8),(2,4,6))
     for w in win_coord:
+        print(w[0],w[1],w[2])
+        print(game[w[0]])
+        print(game[w[1]])
+        print(game[w[2]])
         if game[w[0]] == game[w[1]] == game[w[2]]:
+            
             return game[w[0]]
     return False
 
