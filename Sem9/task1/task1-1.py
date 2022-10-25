@@ -10,9 +10,8 @@ from telegram.ext import (
     Filters,
     ConversationHandler,
     CommandHandler,
-    ContextTypes
     )
-import datetime
+
 # Включим ведение журнала
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',\
