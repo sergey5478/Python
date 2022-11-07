@@ -9,8 +9,12 @@ import word as wo
 
 def getToken():
     token = ''
-    with open(wo.TOKEN, 'r', encoding='utf-8') as my_file:
-        token = my_file.read()        
+    if os.path.isfile(wo.TOKEN):
+        f = open(wo.TOKEN, "r")
+        token = f.read()
+        f.close()
+    else:
+        sys.exit()  
     return token
 
 def isWin(arr, who):
